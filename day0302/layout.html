@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .warpper{
+            background-color: grey;
+            width: 600px;
+            height: 600px;
+            margin: auto;
+        }
+        #top_div{
+            width: 100%;
+            height: 100px;
+            background-color: salmon;
+        }
+        #side_div{
+            width: 100px;
+            height:400px;
+            background-color: blue;
+            float: left;
+        }
+        #content_div{
+            width: 500px;
+            height:400px;
+            background-color: greenyellow;
+            float: left;
+        }
+        #footer_div{
+            width: 100%;
+            height:100px;
+            background-color: orchid;
+            clear: both ;
+        }
+        .top_nevi{
+            background-color: khaki;
+            /*자식잉 float 처리 될 경우 부모에는 반드시 overflow:hidden속성을 지정해야한다.*/
+            overflow: hidden;
+        }
+        .top_nevi a{
+            text-decoration: none;
+            font-size: 18px;
+            padding-left: 16px;
+            padding-right: 16px;
+            border: 1px solid black;
+            float: left;
+        }
+        #cs{
+            float: right;
+        }
+        .top_nevi a:hover{
+            background-color: cyan;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="warpper">
+        <div id="top_div">
+            <div class="top_nevi">
+                <a href="#">Home</a>
+                <a href="#"> Shopping</a>
+                <a href="#">MyPage</a>
+                <div id="cs">
+                    <a href="#">CS</a>
+                </div>
+            </div>
+        </div>
+        <div id="side_div"></div>
+        <div id="content_div"></div>
+        <div id="footer_div"></div>
+    </div>
+</body>
+</html>
