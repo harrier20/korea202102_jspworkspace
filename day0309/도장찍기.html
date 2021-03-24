@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #wrapper{
+        width: 700px;
+        height: 550px;
+        background: gainsboro;
+        overflow: hidden;
+    }
+    .paper{
+        width: 600px;
+        height: 100%;
+        background: wheat;
+        float: left;
+        position: relative;
+    }
+    .stamp{
+        width: 100px;
+        height: 100%;
+        background: yellow;
+        float: right;
+    }
+    .stamp img{
+        border: 1px solid red;
+    }
+
+
+</style>
+<script>
+    var img_name = 11;
+
+    function putStamp(){
+        var img = document.createElement("img");
+        img.src="../imgs/slide_img/img (" + img_name + ").png";
+
+        img.style.width = 60+"px";
+        img.style.height = 60+"px";
+
+        var paper = document.querySelector(".paper");
+        paper.appendChild(img);
+
+        var x = event.clientX;
+        var y = event.clientY;
+        img.style.border = "2px solid black";
+        img.style.position = "absolute";
+        img.style.left=x-30+"px";
+        img.style.top=y-30+"px";
+    } 
+</script>
+<body>
+    <div id="wrapper">
+        <div class="stamp">
+            <img src="../imgs/slide_img/img (1).png" onClick="img_name = 1">
+            <img src="../imgs/slide_img/img (2).png" onClick="img_name = 2">
+            <img src="../imgs/slide_img/img (3).png" onClick="img_name = 3">
+            <img src="../imgs/slide_img/img (4).png" onClick="img_name = 4">
+            <img src="../imgs/slide_img/img (5).png" onClick="img_name = 5">
+        </div>
+        <div class="paper" onmousedown="putStamp()">
+
+        </div>
+    </div>
+</body>
+</html>

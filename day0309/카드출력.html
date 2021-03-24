@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var div;
+        var n = 0;//변수의 값이 숫자인경우 초기값 설정
+
+        window.addEventListener("load",function(){
+            init();
+        });//end window
+
+        function init(){
+            var bt = document.createElement("button");
+            bt.innerText = "카드생성";
+            bt.addEventListener("click",function(){
+                createCard();
+            });//버튼을 클릭하면
+
+            var bt2 = document.createElement("button");
+            bt2.innerText = "자동 생성";
+            bt2.addEventListener("click", function(){
+                setInterval("createCard()",200);
+            });//자동생성
+
+            div = document.createElement("div");
+            div.style.width = 800+"px";
+            div.style.height = 600+"px";
+            div.style.background = "yellow";
+            div.style.margin="auto";
+            div.style.overflow="hidden";
+
+            document.body.appendChild(bt);
+            document.body.appendChild(bt2);
+            document.body.appendChild(div);
+
+        }//end init
+
+        function createCard(){
+            img = document.createElement("img");
+            n=n%5;
+            n++;
+            img.src = "../imgs/slide_img/img ("+n+").png";
+            div.appendChild(img);
+            // if(n>=5){
+            //     n=0;
+            // }
+            
+        }//end createCard; 카드이미지 동적생성
+
+    </script>
+</head>
+<body>
+    <img src="" alt="">
+</body>
+</html>

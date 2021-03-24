@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .wrapper{
+        width: 600px;
+        margin: auto;
+    }
+</style>
+<script>
+    window.addEventListener("load",function () {
+        var bt = document.querySelector("button");
+        bt.addEventListener("click",function() {
+           send(); 
+        });
+
+    })
+
+    function send() {
+        var form1 = document.getElementById("form1");
+        
+    }
+</script>
+</head>
+<body>
+    <div class="wrapper">
+        <form id="form1">
+            <table width = "100%" border="1px">
+                <tr>
+                    <td><input type="text" placeholder="ID"></td>
+                </tr>
+                <tr>
+                    <td><input type="password" placeholder="password"></td>
+                </tr>
+                <tr>
+                    <td><input type="password" placeholder="confirm password"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="" id="">
+                            <option value="">010</option>
+                            <option value="">011</option>
+                            <option value="">017</option>
+                            <option value="">019</option>
+                        </select>-
+                        <input type="text" placeholder="앞자리">-
+                        <input type="text" placeholder="뒷자리">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="agree">동의
+                        <input type="radio" name="agree">동의안함
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button>가입</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

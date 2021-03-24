@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    window.addEventListener("load",function(){
+        document.body.addEventListener("keydown", function(e){
+        // console.log("e의 정체는?",e);
+            switch(e.keyCode){
+                case 37 : console.log("좌측");break;
+                case 38 : console.log("상측");break;
+                case 39 : console.log("우측");break;
+                case 40 : console.log("하측");break;
+                default: console.log("방향키만 누르세요");
+            }
+
+
+        });
+    });        
+</script>
+</head>
+<body>
+    
+</body>
+</html>

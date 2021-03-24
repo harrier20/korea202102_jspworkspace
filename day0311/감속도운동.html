@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    #pica{
+        width: 80px;
+    }
+
+</style>
+<script>
+
+    var targetX=500;
+    var a = 0.1;
+    function move(){
+        var pica = document.getElementById("pica");
+        pica.style.left = parseInt(pica.style.left)+a*(targetX - parseInt(pica.style.left))+"px";
+
+    }
+</script>
+</head>
+<body>
+    <button onclick="move()">움직이기</button>
+    <img src="../imgs/slide_img/img (11).png" id="pica" style="position: absolute; left: 0px;top: 200px;">
+</body>
+</html>

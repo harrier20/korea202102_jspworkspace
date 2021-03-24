@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>frameAnimation</title>
+    <script>
+        var n = 1;
+        function next(){
+            n=n+1;
+            //문서내의 이미지 src의 값을 변하게 하기 위한 함수
+            document.querySelector("img").src="../imgs/drive-download-20210303T054329Z-001/image"+n+".png";
+        }
+    </script>
+</head>
+<body>
+    <button onclick="next()">애니메이션 동작</button>
+    <img src="../imgs/drive-download-20210303T054329Z-001/image1.png" alt="">
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper{
+            margin: auto;
+            position: relative;
+            width: 1200px;
+            height: 650px;
+            background-repeat: repeat-x;
+            overflow: hidden;
+            background: yellow;
+        }
+    </style>
+    </style>
+    <script>
+        var img;
+        function getPos(){
+            console.log("마우스 움직임")
+            var x = event.clientX;
+            var y = event.clientY;
+            document.getElementById("x-pos").innerText=x;
+            document.getElementById("y-pos").innerText=y;
+
+            img.style.left = (x-50)+"px";
+            img.style.top = (y-50)+"px";
+        }
+        function init(){
+            img = document.createElement("img");
+            img.src="../imgs/iconfinder_Poke_Ball_1703896.png";
+            img.style.position = "absolute";
+            img.style.left = 150+"px";
+            img.style.top = 150 + "px";
+            img.style.width = 100+"px"
+
+            var wrapper = document.getElementById("wrapper");
+            wrapper.appendChild(img);
+        }
+    </script>
+</head>
+<body onmousemove="getPos()" onload="init()">
+    <div id="wrapper">
+        <span id="x-pos">0</span>px
+        <span id="y-pos">0</span>px
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper{
+            margin: auto;
+            width: 900px;
+            height: 600px;
+            background-color: cornflowerblue;
+            overflow: scroll;
+        }
+        .leftside{
+            width: 150px;
+            height: 100%;
+            background-color: yellowgreen;
+            float: left;
+        }
+        #content{
+            width: 750px;
+            height: 100%;
+            background-color: turquoise;
+            float: left;
+        }
+        img{
+            width: 100px;
+
+        }
+    </style>
+    <script>
+        function showProduct(){
+            var img = document.createElement("img");
+            img.src="../imgs/slide_img/img (1).png"
+            document.querySelector("#content").appendChild(img);
+            var br = document.createElement("br");   
+            var n = document.querySelector("#txt").value;
+            ((count%n)==0)? document.querySelector("#content").appendChild(br):0; 
+        }
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="leftside">
+            <input  type="text" value="3" id="txt">
+            <button onclick="showProduct()">상품 나열</button>
+        </div>
+        <div id="content">
+
+        </div>
+    </div>
+</body>
+</html>

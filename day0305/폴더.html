@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var status;
+    var flag = true;
+    function openClose(){
+        status = (flag)? "on" : "off";
+        document.querySelector("#folder").src="../imgs/Folder_"+status+".webp"
+        flag = !flag;
+    }
+</script>
+<body>
+    <img id="folder" src="../imgs/Folder_off.webp" onclick="openClose()">
+</body>
+</html>

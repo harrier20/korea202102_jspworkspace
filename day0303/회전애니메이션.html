@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #pix{
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        border:10px dotted blanchedalmond;
+    }
+    #wrapper{
+        margin: auto;
+        width: 320px;
+        height: 320px;
+        text-align: center;
+    }
+</style>
+<script>
+    var r = 0;
+    function rotate1(){
+        r= r+5;
+        document.querySelector("#pix").style.transform="rotate("+r+"deg)";
+    }
+    function rotate2(){
+        r= r-5;
+        document.querySelector("#pix").style.transform="rotate("+r+"deg)";
+    }
+</script>
+<body>
+    <div id="wrapper">
+        <button onclick="rotate1()">시계 방향</button>
+        <button onclick="rotate2()">시계 반대방향</button>
+        <p>
+        <img id="pix" src="../imgs/wlll.png" alt="">
+    </div>
+</body>
+</html>
