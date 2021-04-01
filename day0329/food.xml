@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xml과 html은 형제, 
+단 차이점 
+html : 문서에 어떻게 표현될지에 주력
+xml : 문서에 데이터를 어떻게 구성할지에 주력
+    XML은 사용자가 태그를 정의할 수 있다(사용자 정의 태그)
+-->
+<foodList>
+    <food>
+        <name>짜장면</name>
+        <price>5000원</price>
+    </food>
+    <food>
+        <name>짬뽕</name>
+        <price>6000원</price>
+    </food>
+    <food>
+        <name>탕수육</name>
+        <price>11000원</price>
+    </food>
+</foodList>
